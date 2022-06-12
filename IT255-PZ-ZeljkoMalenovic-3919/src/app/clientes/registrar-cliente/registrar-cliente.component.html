@@ -1,0 +1,17 @@
+<div class="container p-2">
+  <form>
+    <div class="mb-3">
+      <label for="inputId" class="form-label">Id</label>
+      <input #clienteIdInput type="text" class="form-control" id="inputId" aria-describedby="emailHelp" placeholder="Id korisnika">
+    </div>
+    <div class="mb-3">
+      <label for="inputNombre" class="form-label">Ime i Prezime</label>
+      <input #clienteNombreInput type="text" class="form-control" id="inputNombre" aria-describedby="emailHelp" placeholder="Ime i Prezime korisnika">
+    </div>
+    <div class="mb-3">
+      <label for="inputCorreo" class="form-label">Email</label>
+      <input #clienteCorreoInput type="email" class="form-control" id="inputCorreo" aria-describedby="emailHelp" placeholder="Email">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="registrarCliente(clienteIdInput.value, clienteNombreInput.value, clienteCorreoInput.value)">Registruj korisnika</button>
+  </form>
+</div>

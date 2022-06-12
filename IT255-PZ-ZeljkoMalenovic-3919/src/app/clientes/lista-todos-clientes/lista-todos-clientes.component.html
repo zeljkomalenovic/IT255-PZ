@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Ime i prezime</th>
+    <th scope="col">email</th>
+    <th scope="col">Broj porudzbine</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let cliente of listaClientes">
+    <th scope="row">{{cliente.idCliente}}</th>
+    <td>{{cliente.nombreCompleto}}</td>
+    <td>{{cliente.correo}}</td>
+    <td>{{cliente.compras.length}}</td>
+    <td> <button class="btn btn-secondary" type="submit" routerLink="compras/clientes/{{cliente.idCliente}}" >Pregled</button> </td>
+  </tr>
+  </tbody>
+</table>
